@@ -13,20 +13,17 @@ fi
 function conditionally_prefix_path {
   local dir=$1
   if [ -d $dir ]; then
-    PATH="$dir:${PATH}"
+    case ":$PATH:" in
+      *":$dir:"*) :;; 
+      *) PATH="$dir:$PATH";; 
+    esac
   fi
 }
 
-conditionally_prefix_path /usr/local/bin
-conditionally_prefix_path /usr/local/sbin
-conditionally_prefix_path /usr/local/share/python
-conditionally_prefix_path /usr/local/share/npm/bin
-conditionally_prefix_path /usr/local/mysql/bin
-conditionally_prefix_path /usr/local/heroku/bin
-conditionally_prefix_path /usr/texbin
-conditionally_prefix_path /usr/local/Cellar/emacs/24.4/bin/
-conditionally_prefix_path ~/bin
-conditionally_prefix_path ~/bin/private
+conditionally_prefix_path $HOME/git/jsbsim/src
+conditionally_prefix_path $HOME/git/ardupilot/Tools/autotest
+conditionally_prefix_path /usr/lib/ccache
+
 
 PATH=.:./bin:${PATH}
 
