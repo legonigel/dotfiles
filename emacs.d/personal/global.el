@@ -20,7 +20,7 @@
 (setq column-number-mode  t)
 
 ;; Modeline info
-(display-time-mode 1)
+;; (display-time-mode 1)
 ;; (display-battery-mode 1)
 
 ;; Small fringes
