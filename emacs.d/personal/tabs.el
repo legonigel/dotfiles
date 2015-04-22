@@ -13,6 +13,11 @@
 (setq sh-basic-offset 2)
 (set-default 'javascript-indent-level 2)
 
+(add-hook 'html-mode-hook
+          (lambda()
+            (setq sgml-basic-offset 4)
+            (setq indent-tabs-mode t)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Hippie expand.  Groovy vans with tie-dyes.
 
