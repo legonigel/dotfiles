@@ -12,4 +12,4 @@
 (setenv "PATH" (concat "/usr/local/share/npm/bin:" (getenv "PATH")))
 (setq exec-path (cons "/Applications/Emacs.app/Contents/MacOS/bin" exec-path))
 (setenv "PATH" (concat "/Applications/Emacs.app/Contents/MacOS/bin:" (getenv "PATH")))
-
+(if (eq system-type 'windows-nt)(setq exec-path (cons "C:/Program Files (x86)/Git/bin" exec-path)))
