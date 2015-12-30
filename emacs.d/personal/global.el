@@ -59,6 +59,14 @@
           (lambda ()
             (if whitespace-cleanup-on-save (whitespace-cleanup))))
 
+;; Fix bug in whitespace cleanup to actually check indent-tabs-mode
+(defadvice whitespace-cleanup (around whitespace-cleanup-indent-tab
+                                      activate)
+  "Fix whitespace-cleanup indent-tabs-mode bug"
+  (let ((whitespace-indent-tabs-mode indent-tabs-mode)
+        (whitespace-tab-width tab-width))
+    ad-do-it))
+
 ;; Trash can support
 (setq delete-by-moving-to-trash t)
 

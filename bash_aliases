@@ -257,7 +257,7 @@ alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
 ## Miscellaneous
 ############################################################
 
-alias e='emacsclient'
+alias e=$EDITOR
 alias install_emacs='brew install emacs --srgb --cocoa'
 alias install_emacs_head='brew install bazaar && brew install emacs --HEAD --srgb --cocoa'
 alias link_emacs='ln -snf /usr/local/Cellar/emacs/24.3/bin/emacs /usr/local/bin/emacs && ln -snf /usr/local/Cellar/emacs/24.3/bin/emacsclient /usr/local/bin/emacsclient'
