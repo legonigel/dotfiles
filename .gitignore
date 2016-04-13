@@ -14,3 +14,4 @@ emacs.d/ido.last
 emacs.d/.org-id-locations
 emacs.d/.mc-lists.el
 *.elc
+emacs.d/session.*
