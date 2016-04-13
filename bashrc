@@ -14,8 +14,8 @@ function conditionally_prefix_path {
   local dir=$1
   if [ -d $dir ]; then
     case ":$PATH:" in
-      *":$dir:"*) :;; 
-      *) PATH="$dir:$PATH";; 
+      *":$dir:"*) :;;
+      *) PATH="$dir:$PATH";;
     esac
   fi
 }
@@ -205,3 +205,9 @@ fi
 export RUBY_GC_MALLOC_LIMIT=60000000
 # export RUBY_FREE_MIN=200000 # Ruby <= 2.0
 export RUBY_GC_HEAP_FREE_SLOTS=200000 # Ruby >= 2.1
+
+############################################################
+## Django bash completions
+############################################################
+
+source $HOME/.django_bash_completion
