@@ -14,6 +14,7 @@
 (personal 'env)
 (personal 'flymake)
 (personal 'fonts)
+(personal 'my_ggtags)
 (personal 'global)
 (personal 'grep)
 ;; (personal 'ido) ;; replaced by flx-ido
@@ -53,6 +54,7 @@
 (package 'feature-mode)
 (package 'flx-ido)
 (package 'flx-isearch)
+(package 'ggtags)
 (package 'haml-mode)
 (package 'htmlize)
 (package 'js2-mode)
