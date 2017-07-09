@@ -24,6 +24,8 @@ conditionally_prefix_path $HOME/git/jsbsim/src
 conditionally_prefix_path $HOME/git/ardupilot/Tools/autotest
 conditionally_prefix_path /usr/lib/ccache
 
+conditionally_prefix_path $HOME/anaconda2/bin
+
 
 PATH=.:./bin:${PATH}
 
