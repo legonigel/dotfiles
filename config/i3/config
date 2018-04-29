@@ -225,7 +225,7 @@ bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f
 # finds out, if available)
 bar {
         position top
-        status_command i3status
+        status_command i3status -c ~/.config/i3status/config.$(hostname -s)
         font pango:DejaVu Sans Mono, FontAwesome 10
         strip_workspace_numbers yes
         tray_output eDP1
