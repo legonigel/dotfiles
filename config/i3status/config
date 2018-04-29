@@ -54,7 +54,8 @@ battery 0 {
         format_down = ""
         status_chr = ""
         status_bat = ""
-        status_full = ""
+        status_full = "☻"
+        status_unk = "?"
 }
 
 battery 1 {
@@ -65,7 +66,8 @@ battery 1 {
         format_down = ""
         status_chr = ""
         status_bat = ""
-        status_full = "☻"
+        status_full = "☻"
+        status_unk = "?"
 }
 
 run_watch DHCP {
