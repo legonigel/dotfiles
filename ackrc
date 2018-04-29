@@ -3,7 +3,11 @@
 --ignore-dir=node_modules
 --ignore-dir=tmp
 --ignore-dir=.bundle
+--ignore-dir=build
 
 --ignore-file=is:tags
 --ignore-file=is:TAGS
 --ignore-file=is:.gitignore
+
+--smart-case
+--sort-file
