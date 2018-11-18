@@ -11,7 +11,7 @@
 (setq c-basic-offset 2)
 (setq css-indent-offset 2)
 (setq sh-basic-offset 2)
-(setq python-indent-offset 1)
+(setq python-indent-offset 4)
 (set-default 'javascript-indent-level 2)
 
 (add-hook 'html-mode-hook
@@ -20,7 +20,7 @@
       (setq indent-tabs-mode t)))
 
 (add-hook 'python-mode-hook
-      (lambda() (setq indent-tabs-mode t)))
+      (lambda() (setq indent-tabs-mode nil)))
 
 (add-hook 'makefile-mode-hook
       (lambda() (setq indent-tabs-mode t)))
