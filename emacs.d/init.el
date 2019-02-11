@@ -44,12 +44,11 @@
 (when (not package-archive-contents) (package-refresh-contents))
 
 (package 'ag)
-(package 'browse-kill-ring+)
+(package 'browse-kill-ring)
 (package 'bundler)
 (package 'coffee-mode)
 (package 'csv-mode)
-(package 'dired-details+)
-(package 'dropdown-list)
+(package 'direnv)
 (package 'expand-region)
 (package 'feature-mode)
 (package 'flx-ido)
@@ -69,7 +68,6 @@
 (package 'projectile)
 (package 'projectile-rails)
 (package 'rbenv)
-(package 'ruby-guard)
 (package 'sass-mode)
 (package 'shell-pop)
 (package 'textile-mode)
@@ -83,10 +81,8 @@
 ;; (vendor 'ace-jump-mode) ;; unused
 ;; (vendor 'auctex)        ;; unused
 (vendor 'feature-mode)
-(vendor 'filladapt)
-;; (vendor 'hl-line)       ;; unused
+ ;; (vendor 'hl-line)       ;; unused
 (vendor 'jekyll)
 ;; (vendor 'key-chord)     ;; unused
 (vendor 'mode-line-bell)
 (vendor 'rcodetools    'xmp)
-(vendor 'revbufs       'revbufs)

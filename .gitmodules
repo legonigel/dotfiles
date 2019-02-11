@@ -1,15 +1,9 @@
-[submodule "emacs.d/vendor/filladapt"]
-  path = emacs.d/vendor/filladapt
-  url = http://github.com/emacsmirror/filladapt.git
 [submodule "emacs.d/vendor/ri-emacs"]
   path = emacs.d/vendor/ri-emacs
   url = http://github.com/pedz/ri-emacs.git
 [submodule "emacs.d/vendor/jekyll.el"]
   path = emacs.d/vendor/jekyll.el
   url = http://github.com/talison/jekyll.el.git
-[submodule "emacs.d/vendor/revbufs"]
-  path = emacs.d/vendor/revbufs
-  url = http://github.com/emacsmirror/revbufs.git
 [submodule "emacs.d/vendor/projectile"]
-	path = emacs.d/vendor/projectile
-	url = http://github.com/bbatsov/projectile.git
+  path = emacs.d/vendor/projectile
+  url = http://github.com/bbatsov/projectile.git
