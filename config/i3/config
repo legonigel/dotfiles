@@ -18,7 +18,7 @@ exec --no-startup-id dunst
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 
 # Background image
-exec_always --no-startup-id feh --bg-fill /home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/comma_horiz.png ~/Pictures/comma_vert.png ~/Pictures/comma_vert.png
 
 exec --no-startup-id gnome-keyring-daemon --start
 
@@ -117,7 +117,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
 
 set $workspace1 "1"
 set $workspace2 "2"
@@ -165,7 +165,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #set $Locker "i3lock -i $([[ -e /home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo-desktop.png ]] && { echo \\"/home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo-desktop.png\\" ; } || \\{ echo \\"/home/nigel/Pictures/Backgorunds/Cortex-Wallpaper-Logo.png\\"; \\};) && sleep 1"
-set $Locker i3lock -i /home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo-lock.png && sleep 1
+#set $Locker i3lock -i /home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo-lock.png && sleep 1
+set $Locker ~/.i3/i3lock-fancy-multimonitor/lock --no-text -b=0x4 && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {

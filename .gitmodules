@@ -7,3 +7,6 @@
 [submodule "emacs.d/vendor/projectile"]
   path = emacs.d/vendor/projectile
   url = http://github.com/bbatsov/projectile.git
+[submodule "i3/i3lock-fancy-multimonitor"]
+	path = i3/i3lock-fancy-multimonitor
+	url = https://github.com/guimeira/i3lock-fancy-multimonitor.git
