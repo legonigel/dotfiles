@@ -19,12 +19,12 @@
   (global-set-key [(meta return)] 'mf)
   (add-hook 'window-setup-hook 'maximize-frame t))
 
-(if (window-system)
-    (cond
-     ((fboundp 'toggle-frame-fullscreen)
-      (personal-init-fullscreen))
-     ((fboundp 'ns-toggle-fullscreen)
-      (personal-init-ns-fullscreen))
-     (t
-      (personal-init-maxframe))
-     ))
+;; (if (window-system)
+;;     (cond
+;;      ((fboundp 'toggle-frame-fullscreen)
+;;       (personal-init-fullscreen))
+;;      ((fboundp 'ns-toggle-fullscreen)
+;;       (personal-init-ns-fullscreen))
+;;      (t
+;;       (personal-init-maxframe))
+;;      ))

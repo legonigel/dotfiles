@@ -33,6 +33,7 @@
 (personal 'shell-mode)
 (personal 'tabs)
 (personal 'theme)
+(personal 'tramp)
 (personal 'utf-8)
 (personal 'zoom)
 
@@ -57,6 +58,7 @@
 (package 'haml-mode)
 (package 'htmlize)
 (package 'js2-mode)
+(package 'kotlin-mode)
 (package 'lua-mode)
 (package 'magit)
 (package 'markdown-mode)

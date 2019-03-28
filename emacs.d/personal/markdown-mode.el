@@ -18,3 +18,7 @@ otherwise fallback to markdown-preview"
 (eval-after-load 'markdown-mode
   '(progn
      (define-key markdown-mode-map (kbd "C-c C-v") 'marked-markdown-preview)))
+
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (setq-local whitespace-cleanup-on-save nil)))

@@ -12,7 +12,7 @@
 (setq css-indent-offset 2)
 (setq sh-basic-offset 2)
 (setq python-indent-offset 4)
-(set-default 'javascript-indent-level 2)
+(set-default 'javascript-indent-level 4)
 
 (add-hook 'html-mode-hook
       (lambda()
