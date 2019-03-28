@@ -2,6 +2,12 @@
 ## file *should generate no output* or it will break the scp and rcp commands.
 ############################################################
 
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 if [ -e /etc/bashrc ] ; then
   . /etc/bashrc
 fi
@@ -26,6 +32,8 @@ conditionally_prefix_path /usr/lib/ccache
 conditionally_prefix_path /opt/gcc-arm-none-eabi-4_9-2015q3/bin
 
 conditionally_prefix_path $HOME/anaconda2/bin
+
+conditionally_prefix_path $HOME/one/xx/tools/edb
 
 
 PATH=.:./bin:${PATH}
@@ -139,8 +147,22 @@ else
   }
 fi
 
+normal_color=$'\033[00m'
+red_color=$'\033[41m'
+exit_color=$normal_color
+
+exit_color() {
+    exit_code=$?
+    if [ "$exit_code" != 0 ]; then
+        echo "$red_color"
+    else
+        echo "$normal_color"
+    fi
+    return "$exit_code"
+}
+
 if [ -n "$BASH" ]; then
-  export PS1='\[\033[32m\]\n[\s: \w] $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[$normal_color\]\n\[$(exit_color)\][$?]\[$normal_color\]\[\033[32m\][\s: \w] $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
@@ -167,7 +189,8 @@ export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 # remove duplicates from the history (when a new item is added)
 export HISTCONTROL=erasedups
 # increase the default size from only 1,000 items
-export HISTSIZE=10000
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000
 
 ############################################################
 ## Aliases
@@ -214,3 +237,10 @@ export RUBY_GC_HEAP_FREE_SLOTS=200000 # Ruby >= 2.1
 ############################################################
 
 source $HOME/.django_bash_completion
+
+############################################################
+## Java and Android
+############################################################
+
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/"
+export ANDROID_HOME="$HOME/Android/Sdk"

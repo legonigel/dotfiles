@@ -28,6 +28,18 @@ alias path='echo -e ${PATH//:/\\n}'
 alias ax="chmod a+x"
 
 ############################################################
+## PS
+############################################################
+
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+############################################################
+## Grep
+############################################################
+
+alias hgrep="history | grep"
+
+############################################################
 ## List
 ############################################################
 
@@ -46,6 +58,7 @@ alias l="ls"
 alias ll="ls -lh"
 alias la="ls -a"
 alias lal="ls -alh"
+alias l.="ls -A | egrep '^\.'"
 
 ############################################################
 ## Git
@@ -264,6 +277,10 @@ alias link_emacs='ln -snf /usr/local/Cellar/emacs/24.3/bin/emacs /usr/local/bin/
 alias link_emacs_head='ln -snf /usr/local/Cellar/emacs/HEAD/bin/emacs /usr/local/bin/emacs && ln -snf /usr/local/Cellar/emacs/HEAD/bin/emacsclient /usr/local/bin/emacsclient'
 alias upgrade_emacs='brew uninstall emacs && install_emacs && link_emacs'
 alias upgrade_emacs_head='brew uninstall emacs && install_emacs_head && link_emacs_head'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 export GREP_COLOR="1;37;41"
 alias grep="grep --color=auto"
