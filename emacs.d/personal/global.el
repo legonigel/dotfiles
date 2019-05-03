@@ -53,7 +53,10 @@
 (server-start)
 
 ;; Trailing whitespace is unnecessary
-(defvar whitespace-cleanup-on-save t)
+(defvar whitespace-cleanup-on-save t
+  "Cleanup whitespace before save")
+(setq whitespace-cleanup-on-save nil)
+(make-variable-buffer-local 'whitespace-cleanup-on-save)
 ;; (setq whitespace-cleanup-on-save nil)
 (add-hook 'before-save-hook
           (lambda ()
