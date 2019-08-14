@@ -33,7 +33,7 @@ conditionally_prefix_path /opt/gcc-arm-none-eabi-4_9-2015q3/bin
 
 conditionally_prefix_path $HOME/anaconda2/bin
 
-conditionally_prefix_path $HOME/one/xx/tools/edb
+conditionally_prefix_path $HOME/go/bin
 
 
 PATH=.:./bin:${PATH}
