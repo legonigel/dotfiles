@@ -1,0 +1,7 @@
+rofi.width: 90
+rofi.combi-modi: window,drun,ssh
+rofi.modi: combi
+rofi.case-sensitive: false
+rofi.hide-scrollbar: true
+rofi.theme: solarized_alternate
+rofi.location: 2
