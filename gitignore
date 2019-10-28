@@ -17,3 +17,4 @@ gemfiles/vendor
 .foreman
 /dump
 /notes.md
+.dir-locals.el
