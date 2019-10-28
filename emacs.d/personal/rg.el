@@ -1,2 +1,2 @@
 (require 'rg)
-(rg-enable-default-bindings)
+(rg-enable-menu)
