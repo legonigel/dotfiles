@@ -267,6 +267,26 @@ function r {
 alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
 
 ############################################################
+## XClip
+############################################################
+
+alias clip="xclip -selection clipboard" # copy to system clipboard
+alias v="xclip -o -selection clipboard" # paste from system clipboard
+
+############################################################
+## Brain Corp
+############################################################
+
+alias roc_login='rocc -u https://api.dev.roc.braincorp.com login -u nigel'
+function curl_roc () {
+  URL=$1
+  [[ "${URL}" != /* ]] && URL="/${URL}"
+
+  TOKEN=$(jq -r .Token ~/rocc.json)
+  curl -v -H "Authorization: Bearer ${TOKEN}" https://api.dev.roc.braincorp.com$URL
+}
+
+############################################################
 ## Miscellaneous
 ############################################################
 
@@ -297,6 +317,8 @@ alias flushdns='sudo discoveryutil udnsflushcaches'
 alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
 
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+alias settings="XDG_CURRENT_DESKTOP=Unity unity-control-center"
 
 function serve {
   local port=$1
