@@ -23,13 +23,13 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/comma_horiz.png ~/Pictures/
 exec --no-startup-id gnome-keyring-daemon --start
 
 exec --no-startup-id spotify
+exec --no-startup-id slack
 
 # tray applications
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-sound-applet
-
-
+exec --no-startup-id blueman-applet
 
 set $mod Mod4
 set $alt Mod1
@@ -156,6 +156,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 for_window [class="Spotify"] move to workspace $workspace10
+for_window [class="Slack"] move to workspace $workspace9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
