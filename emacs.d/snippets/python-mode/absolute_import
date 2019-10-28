@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: absolute_import
+# key: fa
+# group: future
+# --
+from __future__ import absolute_import

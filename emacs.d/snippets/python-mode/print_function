@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: print_function
+# key: fp
+# group: future
+# --
+from __future__ import print_function

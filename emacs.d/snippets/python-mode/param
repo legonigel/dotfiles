@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: param
+# key: param
+# --
+:param ${1:name}${2: type}: ${3:description}
+$0
