@@ -26,14 +26,14 @@ function conditionally_prefix_path {
   fi
 }
 
-conditionally_prefix_path $HOME/git/jsbsim/src
-conditionally_prefix_path $HOME/git/ardupilot/Tools/autotest
+conditionally_prefix_path $HOME/android/platform-tools
 conditionally_prefix_path /usr/lib/ccache
 conditionally_prefix_path /opt/gcc-arm-none-eabi-4_9-2015q3/bin
 
 conditionally_prefix_path $HOME/anaconda2/bin
 
 conditionally_prefix_path $HOME/go/bin
+conditionally_prefix_path $HOME/.cargo/bin
 
 
 PATH=.:./bin:${PATH}
