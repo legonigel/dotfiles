@@ -100,3 +100,6 @@
 (global-unset-key (kbd "<down>"))
 
 (global-set-key (kbd "<f11>") 'compile-dwim)
+
+;; Better kill
+(global-set-key [C-backspace] 'dwim-backward-kill-word)

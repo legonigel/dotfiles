@@ -138,3 +138,16 @@ point and around or after mark are interchanged."
   (interactive)
   (yank)
   (replace-smart-quotes (mark) (point)))
+
+(defun dwim-backward-kill-word ()
+  "Kill word backwards, or whitespace if multiple whitespace, or a single char is not a word"
+  (interactive)
+  (cond
+   ((looking-back (rx (char word)) 1)
+    (backward-kill-word 1))
+   ((looking-back (rx (repeat 2 (char blank))) 2)
+    (delete-horizontal-space t))
+   ((looking-back (rx (char blank)) 1)
+    (backward-kill-word 1))
+   (t
+    (backward-delete-char 1))))
