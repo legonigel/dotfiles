@@ -170,10 +170,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-#set $Locker "i3lock -i $([[ -e /home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo-desktop.png ]] && { echo \\"/home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo-desktop.png\\" ; } || \\{ echo \\"/home/nigel/Pictures/Backgorunds/Cortex-Wallpaper-Logo.png\\"; \\};) && sleep 1"
-#set $Locker i3lock -i /home/nigel/Pictures/Backgrounds/Cortex-Wallpaper-Logo-lock.png && sleep 1
-#set $Locker ~/.i3/i3lock-fancy-multimonitor/lock --no-text -b=0x4 --ignore-empty-password && sleep 1
-set $Locker i3lock --ignore-empty-password --image ~/Pictures/lock.png && sleep 1
+set $Locker ~/.config/i3/lock.sh
+exec --no-startup-id xautolock -time 5 -locker $Locker
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
