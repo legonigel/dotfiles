@@ -253,7 +253,7 @@ bindsym Shift+Print exec "scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'"
 bar {
         position top
         status_command i3status -c ~/.config/i3status/config.$(hostname -s) | ~/git/i3spotifystatus/pystatus.py
-        font pango:DejaVu Sans Mono, FontAwesome 10
+        font pango:DejaVu Sans Mono, FontAwesome5Free 10
         strip_workspace_numbers yes
         tray_output primary
 }
