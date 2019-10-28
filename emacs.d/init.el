@@ -23,6 +23,7 @@
 (personal 'mac)
 (personal 'org)
 (personal 'private)
+(personal 'python)
 (personal 'recentf)
 (personal 'rectangle)
 (personal 'ri-emacs)
