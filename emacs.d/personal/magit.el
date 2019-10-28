@@ -7,7 +7,7 @@
 (add-hook
  'magit-mode-hook
  (lambda ()
-   (setq yas-dont-activate t)))
+   (yas-minor-mode -1)))
 
 ;; full screen magit-status
 ;; borrowed from http://whattheemacsd.com/setup-magit.el-01.html
