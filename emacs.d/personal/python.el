@@ -1,6 +1,7 @@
 ;; Configure flymake for Python
 
 (setq pylint-rc nil)
+(setq pycheck "epylint")
 
 (when (load "flymake" t)
   (defun flymake-pylint-init ()
@@ -12,7 +13,7 @@
            (pylint-rc-arg (if pylint-rc
                               (concat "--rcfile=" pylint-rc)
                               nil)))
-      (list "epylint" (if pylint-rc-arg (list local-file pylint-rc-arg) (list local-file)))))
+      (list pycheck (if pylint-rc-arg (list local-file pylint-rc-arg) (list local-file)))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pylint-init)))
 
