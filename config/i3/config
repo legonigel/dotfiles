@@ -21,6 +21,7 @@ exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec_always --no-startup-id feh --bg-fill ~/Pictures/comma_horiz.png ~/Pictures/comma_vert.png ~/Pictures/comma_vert.png
 
 exec --no-startup-id gnome-keyring-daemon --start
+exec --no-startup-id autorandr -c
 
 exec --no-startup-id spotify
 exec --no-startup-id slack
