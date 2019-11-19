@@ -64,7 +64,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nf '#000000' -nb '#F4800D' -sb '#5F3205' -sf '#F5F5F5' -fn 'monospace:pixelsize=15' -p 'run>'" --usage-log="/home/$USER/.j4-usage-log"
-bindsym $mod+d exec --no-startup-id rofi -show combi -modi combi
+bindsym $mod+d exec --no-startup-id rofi -show combi
 
 # change focus
 bindsym $mod+j focus left
