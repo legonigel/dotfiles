@@ -88,6 +88,7 @@
 (vendor 'feature-mode)
  ;; (vendor 'hl-line)       ;; unused
 (vendor 'jekyll)
+(vendor 'jsonnet-mode)
 ;; (vendor 'key-chord)     ;; unused
 (vendor 'mode-line-bell)
 (vendor 'rcodetools    'xmp)

@@ -10,3 +10,6 @@
 [submodule "i3/i3lock-fancy-multimonitor"]
 	path = i3/i3lock-fancy-multimonitor
 	url = https://github.com/guimeira/i3lock-fancy-multimonitor.git
+[submodule "emacs.d/vendor/jsonnet-mode"]
+	path = emacs.d/vendor/jsonnet-mode
+	url = https://github.com/benley/jsonnet-mode.git
