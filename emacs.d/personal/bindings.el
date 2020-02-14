@@ -103,3 +103,6 @@
 
 ;; Better kill
 (global-set-key [C-backspace] 'dwim-backward-kill-word)
+
+;; Search symbol at point
+(global-set-key (kbd "C-S-s") 'isearch-forward-symbol-at-point)
