@@ -300,7 +300,8 @@ alias upgrade_emacs_head='brew uninstall emacs && install_emacs_head && link_ema
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias alert='LAST=$?; notify-send --urgency="$([ $LAST = 0 ] && echo normal || echo critical)" "$([ $LAST = 0 ] || echo FAILURE )$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"; paplay /usr/share/sounds/ubuntu/notifications/Amsterdam.ogg'
+alias alert_fail='LAST=$?; notify-send --urgency="$([ $LAST = 0 ] && echo normal || echo critical)" "$([ $LAST = 0 ] || echo FAILURE )$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"; [ $LAST = 0 ] || paplay /usr/share/sounds/ubuntu/notifications/Amsterdam.ogg'
 
 export GREP_COLOR="1;37;41"
 alias grep="grep --color=auto"
