@@ -165,6 +165,9 @@ if [ -n "$BASH" ]; then
   export PS1='\[$normal_color\]\n\[$(exit_color)\][$?]\[$normal_color\]\[\033[32m\][\s: \w] $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
+# Fuzzy completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 ############################################################
 ## Optional shell behavior
 ############################################################
@@ -186,11 +189,11 @@ export EDITOR=$HOME/bin/edit
 shopt -s histappend
 
 export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
-# remove duplicates from the history (when a new item is added)
-export HISTCONTROL=erasedups
+# don't remove duplicates from the history (when a new item is added)
+export HISTCONTROL=
 # increase the default size from only 1,000 items
-export HISTSIZE=1000000
-export HISTFILESIZE=1000000
+export HISTSIZE=-1
+export HISTFILESIZE=-1
 
 ############################################################
 ## Aliases
