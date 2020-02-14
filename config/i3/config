@@ -23,6 +23,10 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/comma_horiz.png ~/Pictures/
 exec --no-startup-id gnome-keyring-daemon --start
 exec --no-startup-id autorandr -c
 
+exec --no-startup-id clipster -d
+
+bindsym $mod+c exec ~/git/roficlip/roficlip
+
 exec --no-startup-id spotify
 exec --no-startup-id slack
 
