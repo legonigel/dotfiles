@@ -43,3 +43,5 @@ __git_shortcut  gu   branch
 __git_shortcut  gd   diff
 __git_shortcut  gcp  cherry-pick
 __git_shortcut  gr   remote
+
+source <(kubectl completion bash)

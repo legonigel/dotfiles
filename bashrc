@@ -215,6 +215,8 @@ elif [ -e ~/.bash_completion ]; then
   . ~/.bash_completion
 fi
 
+complete -C /home/nigelarmstrong/bin/vault vault
+
 ############################################################
 ## Other
 ############################################################
