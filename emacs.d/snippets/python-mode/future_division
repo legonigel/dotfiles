@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: division
+# key: fd
+# group: future
+# --
+from __future__ import division
