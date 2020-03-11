@@ -53,6 +53,7 @@
 (package 'csv-mode)
 (package 'direnv)
 (package 'ein)
+(package 'emojify)
 (package 'expand-region)
 (package 'feature-mode)
 (package 'flx-ido)
