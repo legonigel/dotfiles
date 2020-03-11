@@ -351,3 +351,4 @@ function fakefile {
 alias k='kubectl'
 complete -F __start_kubectl k
 alias infra='source infra'
+alias tf='terraform'
