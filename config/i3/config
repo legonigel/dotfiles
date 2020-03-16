@@ -14,6 +14,9 @@
 # Start Dunst for notifications
 exec --no-startup-id dunst
 
+# Low batter notification (-n) every 30s (-t 30s) with sound (-s)
+exec --no-startup-id i3-battery-popup -n -t 30s -s ~/bin/i3-battery-popup.wav
+
 # Start compton composer for video
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 
