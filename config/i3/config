@@ -254,7 +254,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 # bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 bindsym Print exec "scrot -e 'mv $f /tmp/ && gimp /tmp/$f'"
-bindsym Shift+Print exec "scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'"
+bindsym Shift+Print exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
