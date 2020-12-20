@@ -21,28 +21,39 @@
 (add-hook 'python-mode-hook '(lambda () (flymake-mode)))
 
 ;; Configure to wait a bit longer after edits before starting
-(setq-default flymake-no-changes-timeout '3)
+(setq-default flymake-no-changes-timeout '1)
 
 ;; Keymaps to navigate to the errors
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-cn" 'flymake-goto-next-error)))
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-cp" 'flymake-goto-prev-error)))
 
-;; To avoid having to mouse hover for the error message, these functions make flymake error messages
-;; appear in the minibuffer
-(defun show-fly-err-at-point ()
-  "If the cursor is sitting on a flymake error, display the message in the minibuffer"
-  (require 'cl)
+
+(defun flymake-show-error ()
+  "Show the flymake error message at point."
   (interactive)
-  (let ((line-no (line-number-at-pos)))
-    (dolist (elem flymake-err-info)
-      (if (eq (car elem) line-no)
-      (let ((err (car (second elem))))
-        (message "%s" (flymake-ler-text err)))))))
+  (let ((error-message (flymake-error-at-point)))
+    (when error-message
+      (message "%s" error-message))))
+
+(defun flymake-error-at-point ()
+  "Return the flymake error at point, or nil if there is none."
+  (when (boundp 'flymake-err-info)
+    (let* ((lineno (line-number-at-pos))
+           (err-info (car (flymake-find-err-info flymake-err-info
+                                                 lineno))))
+      (when err-info
+        (mapconcat #'flymake-ler-text
+                   err-info
+                   ", "))))
+  (when (and (fboundp 'flymake-diagnostics) (fboundp 'flymake-diagnostic-text))
+    (mapconcat #'flymake-diagnostic-text (flymake-diagnostics (point)) "\n")
+    )
+  )
 
 (defadvice flymake-goto-next-error (after display-message activate compile)
   "Display the error in the mini-buffer rather than having to mouse over it"
-  (show-fly-err-at-point))
+  (flymake-show-error))
 
 (defadvice flymake-goto-prev-error (after display-message activate compile)
   "Display the error in the mini-buffer rather than having to mouse over it"
-  (show-fly-err-at-point))
+  (flymake-show-error))
