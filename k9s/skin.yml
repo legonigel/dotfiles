@@ -1,0 +1,91 @@
+foreground: &foreground "#f6f3e8"
+background: &background "#242424"
+current_line: &current_line "#656565"
+selection: &selection "#454545"
+comment: &comment "#99968b"
+lime: &lime "#cae682"
+green: &green "#95e454"
+yellow: &yellow "#ffcc00"
+red: &red "#e5786d"
+blue: &blue "#8ac6f2"
+
+magenta: &magenta "#d33682"
+
+
+k9s:
+  body:
+    fgColor: *foreground
+    bgColor: *background
+    logoColor: *yellow
+  info:
+    fgColor: *green
+    sectionColor: *foreground
+  dialog:
+    fgColor: *foreground
+    bgColor: *background
+    buttonFgColor: *foreground
+    buttonBgColor: *green
+    buttonFocusFgColor: *background
+    buttonFocusBgColor: *yellow
+    labelFgColor: *yellow
+    fieldFgColor: *foreground
+  frame:
+    border:
+      fgColor: *selection
+      focusColor: *current_line
+    menu:
+      fgColor: *foreground
+      keyColor: *green
+      numKeyColor: *green
+    crumbs:
+      fgColor: *foreground
+      bgColor: *current_line
+      activeColor: *selection
+    status:
+      newColor: *lime
+      modifyColor: *yellow
+      addColor: *green
+      errorColor: *red
+      highlightcolor: *yellow
+      killColor: *comment
+      completedColor: *comment
+    title:
+      fgColor: *foreground
+      bgColor: *background
+      highlightColor: *yellow
+      counterColor: *blue
+      filterColor: *lime
+  views:
+    charts:
+      bgColor: default
+      defaultDialColors:
+        - *blue
+        - *red
+      defaultChartColors:
+        - *blue
+        - *red
+    table:
+      fgColor: *foreground
+      bgColor: *background
+      cursorFgColor: *selection
+      cursorBgColor: *current_line
+      header:
+        fgColor: *foreground
+        bgColor: *background
+        sorterColor: *lime
+    xray:
+      fgColor: *foreground
+      bgColor: *background
+      cursorColor: *current_line
+      graphicColor: *blue
+      showIcons: false
+    yaml:
+      keyColor: *lime
+      colonColor: *blue
+      valueColor: *red
+    logs:
+      fgColor: *foreground
+      bgColor: *background
+      indicator:
+        fgColor: *foreground
+        bgColor: *background
