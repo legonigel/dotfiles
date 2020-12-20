@@ -177,7 +177,7 @@ shopt -s extglob
 shopt -s checkwinsize
 
 export PAGER="less"
-export EDITOR=$HOME/bin/edit
+export EDITOR="emacsclient -t"
 
 ############################################################
 ## History
