@@ -45,3 +45,9 @@ __git_shortcut  gcp  cherry-pick
 __git_shortcut  gr   remote
 
 source <(kubectl completion bash)
+
+eval `pip3 completion --bash`
+
+if [ -f ~/taros-complete.sh ]; then
+  . ~/taros-complete.sh
+fi
