@@ -36,13 +36,12 @@
 (personal 'tabs)
 (personal 'theme)
 (personal 'tramp)
-(personal 'utf-8)
 (personal 'zoom)
 
 ;; elpa managed
 ;; ------------------
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 (when (not package-archive-contents) (package-refresh-contents))
 
