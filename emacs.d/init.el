@@ -63,6 +63,7 @@
 (package 'go-projectile)
 (package 'groovy-mode)
 (package 'haml-mode)
+(package 'highlight-indent-guides)
 (package 'htmlize)
 (package 'js2-mode)
 (package 'kotlin-mode)
