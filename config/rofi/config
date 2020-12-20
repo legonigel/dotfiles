@@ -5,3 +5,4 @@ rofi.case-sensitive: false
 rofi.hide-scrollbar: true
 rofi.theme: solarized_alternate
 rofi.location: 2
+rofi.run-command: i3 exec '{cmd}'
