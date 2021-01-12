@@ -44,9 +44,13 @@ __git_shortcut  gd   diff
 __git_shortcut  gcp  cherry-pick
 __git_shortcut  gr   remote
 
-source <(kubectl completion bash)
+if type kubectl &> /dev/null; then
+  source <(kubectl completion bash)
+fi
 
-eval `pip3 completion --bash`
+if type pip3 &> /dev/null; then
+  eval `pip3 completion --bash`
+fi
 
 if [ -f ~/taros-complete.sh ]; then
   . ~/taros-complete.sh
