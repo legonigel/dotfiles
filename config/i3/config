@@ -179,7 +179,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 set $Locker ~/.config/i3/lock.sh
-exec --no-startup-id xautolock -time 5 -locker $Locker
+exec --no-startup-id xautolock -time 15 -locker $Locker
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
