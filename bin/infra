@@ -1,5 +1,5 @@
 echo "Login to account"
 saml2aws login --skip-prompt -a "$1" && export AWS_PROFILE="$1" || return
 
-export AWS_SHARED_CREDENTIALS_FILE="/home/nigelarmstrong/.aws/credentials"
+export AWS_SHARED_CREDENTIALS_FILE="$HOME/.aws/credentials"
 export AWS_SDK_LOAD_CONFIG=1
