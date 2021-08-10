@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: virtual-repository
+# key: artv
+# group: artifactory
+# --
+resource "artifactory_virtual_repository" "${1:name}" {
+  key = "$1"
+  package_type = "${2:package-type}"
+  repositories = [
+    $0
+  ]
+}

@@ -1,0 +1,46 @@
+k9s:
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: false
+  crumbsless: false
+  readOnly: false
+  noIcons: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: 60
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false
+  currentContext: arn:aws:eks:us-west-2:182355141913:cluster/cicd
+  currentCluster: arn:aws:eks:us-west-2:182355141913:cluster/cicd
+  clusters:
+    arn:aws:eks:us-west-2:182355141913:cluster/cicd:
+      namespace:
+        active: jenkins-dev
+        favorites:
+        - jenkins-dev
+        - jenkins
+        - influxdb
+        - monitoring
+        - all
+        - default
+      view:
+        active: statefulset jenkins-dev
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70

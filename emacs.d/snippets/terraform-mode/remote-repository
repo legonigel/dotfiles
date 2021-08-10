@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: remote-repository
+# key: artr
+# group: artifactory
+# --
+resource "artifactory_remote_repository" "${1:name}" {
+  key = "$1"
+  package_type = "${2:package-type}"
+  url = "$3"$0
+}

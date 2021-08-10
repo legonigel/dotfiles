@@ -55,3 +55,11 @@ fi
 if [ -f ~/taros-complete.sh ]; then
   . ~/taros-complete.sh
 fi
+
+if type roc &> /dev/null; then
+  source <(roc completion)
+fi
+
+if type aws_completer &> /dev/null; then
+  complete -C aws_completer aws
+fi

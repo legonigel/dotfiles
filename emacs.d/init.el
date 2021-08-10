@@ -13,11 +13,12 @@
 (personal 'disabled)
 (personal 'env)
 (personal 'flymake)
+(personal 'flymake-shellcheck)
 (personal 'fonts)
 (personal 'my_ggtags)
 (personal 'global)
 (personal 'grep)
-;; (personal 'ido) ;; replaced by flx-ido
+; (personal 'ido) ;; replaced by flx-ido
 (personal 'javascript)
 (personal 'kbd-macros)
 (personal 'mac)
@@ -99,6 +100,7 @@
 ;; (vendor 'ace-jump-mode) ;; unused
 ;; (vendor 'auctex)        ;; unused
 (vendor 'feature-mode)
+(vendor 'guess-offset 'guess-offset-set-c-basic-offset)
  ;; (vendor 'hl-line)       ;; unused
 (vendor 'jekyll)
 (vendor 'jsonnet-mode)

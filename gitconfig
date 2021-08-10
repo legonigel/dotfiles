@@ -26,6 +26,7 @@
   ignoresubmodules = untracked
 [core]
   excludesfile = ~/.gitignore
+  attributesfiles = ~/.gitattributes
 [heroku]
   account = personal
 [pull]
@@ -33,7 +34,14 @@
 [fetch]
   prune = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[user]
+  email = nigel.armstrong@braincorp.com
+  name = Nigel Armstrong
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[github]
+  user = nigelarmstrong-bc

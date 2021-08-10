@@ -53,3 +53,6 @@
       (compile (default-value 'compile-command))))
    (t
     (recompile))))
+
+
+(add-hook 'c-mode-common-hook 'c-guess)
