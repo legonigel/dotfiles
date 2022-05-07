@@ -35,7 +35,6 @@ conditionally_prefix_path $HOME/anaconda2/bin
 conditionally_prefix_path $HOME/go/bin
 conditionally_prefix_path $HOME/.cargo/bin
 
-
 PATH=.:./bin:${PATH}
 
 ############################################################
@@ -241,7 +240,9 @@ export RUBY_GC_HEAP_FREE_SLOTS=200000 # Ruby >= 2.1
 ## Django bash completions
 ############################################################
 
-source $HOME/.django_bash_completion
+if [ -f $HOME/.django_bash_completion ]; then
+  source $HOME/.django_bash_completion
+fi
 
 ############################################################
 ## Java and Android
