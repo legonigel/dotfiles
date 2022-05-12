@@ -49,7 +49,7 @@ if type kubectl &> /dev/null; then
 fi
 
 if type pip3 &> /dev/null; then
-  eval `pip3 completion --bash`
+  eval `python3 -m pip completion --bash`
 fi
 
 if [ -f ~/taros-complete.sh ]; then
