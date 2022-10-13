@@ -250,3 +250,17 @@ fi
 
 export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/"
 export ANDROID_HOME="$HOME/Android/Sdk"
+
+############################################################
+## WSL support
+############################################################
+
+if grep -iq Microsoft /proc/version; then
+  export LIBGL_ALWAYS_INDIRECT=1
+  export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0 # in WSL 2
+fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[ -f /home/nigel/.nvm/versions/node/v16.17.1/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash ] && . /home/nigel/.nvm/versions/node/v16.17.1/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash
