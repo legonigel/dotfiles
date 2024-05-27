@@ -264,3 +264,7 @@ fi
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [ -f /home/nigel/.nvm/versions/node/v16.17.1/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash ] && . /home/nigel/.nvm/versions/node/v16.17.1/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash
+
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
